@@ -1,41 +1,121 @@
 package module;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class Club {
-	
-    private String name;
-    private String country;
-    private String city;
-    private int creation;
-    private String stade;
-    private int capaciteStade;
-    private String couleurHome;
-    private String couleurAway;
-    private String president;
-    
-	public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-    
-     public String geCountry() {
-    	return "Country: "+country;
-     }
-     
-     public void setCountry(String pCountry) {
-    	 country=pCountry;
-     }
-     
-     
-    /**
+//	Création d'un calendar 
+	static Calendar calendar = Calendar.getInstance();
+
+	// initialisation des Etats du Club
+	private String nameClub;
+	private String country;
+	private String city;
+	private int creation;
+	private String stade;
+	private int capaciteStade;
+	private String couleurHome;
+	private String couleurAway;
+	private String president;
+
+	//initialisation des Etats palmares
+	private String namePalmares="Palmares";
+	private int championsLeague;
+	private String championShips;
+	
+	//// initialisation des Etats de l'Equipe
+
+	// Affiche l'année de la saison actuelle
+	private String showSaison() {
+		return "season : " + calendar.get(Calendar.YEAR) + " - " + (calendar.get(Calendar.YEAR) + 1);
+	}
+
+	// affiche les étoiles avec le titre à mettre en paramètre
+	private void etoileTitre(String titre) {
+		System.out.println("*********************************************\n" + titre
+				+ "\n*********************************************");
+	}
+	
+	//Boucle qui parcours les lists renseigné en paramètre
+	private void parcoursList(List<String>list) {
+		for(String val: list) {
+			System.out.println(val);
+		}
+		System.out.println();
+	}
+
+	// Création d'une liste avec info Club
+	private List<String> creationClub() {
+		List<String> listInfoClub = new ArrayList<>();
+		listInfoClub.add(getCountry());
+		listInfoClub.add(getCity());
+		listInfoClub.add(getCreation());
+		listInfoClub.add(getStade());
+		listInfoClub.add(getCapaciteStade());
+		listInfoClub.add(getCouleurHome());
+		listInfoClub.add(getCouleurAway());
+		listInfoClub.add(getPresident());
+
+		return listInfoClub;
+	}
+
+	//Affiche les information sur le club
+	public void showInfoClub() {
+		List<String> afficheClub = creationClub();
+		System.out.println("Info sur le Club ");
+		etoileTitre(nameClub);
+
+		parcoursList(afficheClub);
+	}
+	
+	//Création List palmares CLub
+	private List<String> listPalmares(){
+		List<String> listInfoPalmares = new ArrayList<>();
+		listInfoPalmares.add(getChampionsLeague());
+		listInfoPalmares.add(getChampionShips());
+		
+		return listInfoPalmares;
+	}
+	
+	//affiche le palmares du club
+	public void showPalmares() {
+		List<String> affichePalmares = listPalmares();
+		System.out.println("Info sur le palmares du club");
+		etoileTitre(namePalmares);
+		
+		parcoursList(affichePalmares);
+	}
+	
+	//Affiche l'année actuelle
+	public void showTeam() {
+		System.out.println("season : " + calendar.get(Calendar.YEAR) + " - " + (calendar.get(Calendar.YEAR) + 1));
+	}
+
+	// ******************SETTER & GETTER************************************
+
+	public String getName() {
+		return nameClub;
+	}
+
+	public void setName(String name) {
+		nameClub = name;
+	}
+
+	public String getCountry() {
+		return "Country: " + country;
+	}
+
+	public void setCountry(String pCountry) {
+		country = pCountry;
+	}
+
+	/**
 	 * @return the city
 	 */
 	public String getCity() {
-		return city;
+		return "city :" + city;
 	}
 
 	/**
@@ -48,8 +128,8 @@ public class Club {
 	/**
 	 * @return the creation
 	 */
-	public int getCreation() {
-		return creation;
+	public String getCreation() {
+		return "creation :" + creation;
 	}
 
 	/**
@@ -63,7 +143,7 @@ public class Club {
 	 * @return the stade
 	 */
 	public String getStade() {
-		return stade;
+		return "stade :" + stade;
 	}
 
 	/**
@@ -76,8 +156,8 @@ public class Club {
 	/**
 	 * @return the capaciteStade
 	 */
-	public int getCapaciteStade() {
-		return capaciteStade;
+	public String getCapaciteStade() {
+		return "Capacite Stade :" + capaciteStade;
 	}
 
 	/**
@@ -91,7 +171,7 @@ public class Club {
 	 * @return the couleurHome
 	 */
 	public String getCouleurHome() {
-		return couleurHome;
+		return "Couleur Home :" + couleurHome;
 	}
 
 	/**
@@ -105,7 +185,7 @@ public class Club {
 	 * @return the couleurAway
 	 */
 	public String getCouleurAway() {
-		return couleurAway;
+		return "Couleur Away :" + couleurAway;
 	}
 
 	/**
@@ -119,7 +199,7 @@ public class Club {
 	 * @return the president
 	 */
 	public String getPresident() {
-		return president;
+		return "President :" + president;
 	}
 
 	/**
@@ -128,17 +208,35 @@ public class Club {
 	public void setPresident(String president) {
 		this.president = president;
 	}
-	
-//	Année actuelle 
-	Calendar calendar = Calendar.getInstance();
-	
-	public String showSaison() {
-		return "season : "+calendar.get(Calendar.YEAR)+" - "+(calendar.get(Calendar.YEAR)+1) ;
+
+	/**
+	 * 
+	 * @param Champions League to set
+	 */
+	public void setChampionsLeague(int pChampionsLeague) {
+		championsLeague=pChampionsLeague;
 	}
-	public String toString(String equipe) {
-		System.out.println("*********************************************\n"+name+"\n*********************************************\n"+showSaison());
 	
-		return ".";
+	/**
+	 * 
+	 * @return Champions League 
+	 */
+	public String getChampionsLeague() {
+		return "Champions League :"+championsLeague;
 	}
+	
+	/**
+	 * 
+	 * @param Champion Ships to set
+	 */
+	public void setChampionShips(String pChampionShips) {
+		championShips=pChampionShips;
+	}
+	
+	public String getChampionShips() {
+		return "Champion Ships :"+championShips;
+	}
+
+	// ******************Fin SETTER & GETTER************************************
 
 }

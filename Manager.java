@@ -11,7 +11,7 @@ public class Manager {
         // 3 goalKeepers
         // 3 strikers (attaquants)
         // 4 midfielders (milieux)
-		Equipe team = new Equipe(1, 3, 3, 4);
+//		Equipe team = new Equipe(1, 3, 3, 4);
 
         Club real = new Club();
 
@@ -24,6 +24,8 @@ public class Manager {
         real.setCouleurHome("White, White, White");
         real.setCouleurAway("Black, Black, Black");
         real.setPresident("Florentino Perez");
+        real.setChampionsLeague(11);
+        real.setChampionShips("xx");
         
         
         
@@ -41,7 +43,8 @@ public class Manager {
         // Home Colors: White, White, White
         // Away Colors: Black, Black, Black
         // President: Florentino Perez
-        System.out.println(team.toString());
+//        System.out.println(real.toString());
+        real.showInfoClub();
 
         /**
          * Afficher le palmares du club
@@ -50,7 +53,8 @@ public class Manager {
         // Palmares
         // *********************************************
         // Champions League: 11
-        // Championships: xx
+        // Championships: xx*
+        real.showPalmares();
 
         /**
          * Afficher l'effectif
@@ -80,7 +84,9 @@ public class Manager {
         // 1. Cristiano Ronaldo
         // 2. Karim Benzema
         // ...
-        team.showTeam();
+        
+//        System.out.println(real.toString(real));
+//        team.showTeam();
 		
 	}
 }
