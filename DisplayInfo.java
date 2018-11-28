@@ -20,6 +20,8 @@ public class DisplayInfo {
         List<String> titrePalmares = new ArrayList<>();
         String []tabPalmares = new String [titrePalmares.size()];
         List<String> reponsePalmares = new ArrayList<>();
+        reponsePalmares.add(": 11");
+        reponsePalmares.add(": xx");
 //        for(int i = 0;i < nbInfoPalmares;i++ ){
         try {
             Files.write(managePath, "Palmares,Champions League,Championships\n".getBytes(), APPEND);
@@ -37,9 +39,9 @@ public class DisplayInfo {
         tabPalmares = titrePalmares.get(1).split(",");
         for(int i = 0 ; i < tabPalmares.length;i++){
             if(tabPalmares[i].contains("Leag")){
-                System.out.println(tabPalmares[i]+": 11");
+                System.out.println(tabPalmares[i]+reponsePalmares.get(i-1));
             }else if(tabPalmares[i].contains("ships")){
-                System.out.println(tabPalmares[i]+": xx");
+                System.out.println(tabPalmares[i]+reponsePalmares.get(i-1));
             }else {
                 System.out.println(tabPalmares[i]);
             }
