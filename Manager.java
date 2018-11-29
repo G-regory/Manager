@@ -1,9 +1,5 @@
-package module;
-
 public class Manager {
-
-	
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         /**
          * Construire une equipe avec :
          */
@@ -11,24 +7,12 @@ public class Manager {
         // 3 goalKeepers
         // 3 strikers (attaquants)
         // 4 midfielders (milieux)
-//		Equipe team = new Equipe(1, 3, 3, 4);
+
 
         Club real = new Club();
+        DisplayInfo info = new DisplayInfo();
+        info.palmares();
 
-        real.setName("Real Madrid");
-        real.setCountry("Spain");
-        real.setCity("Madrid");
-        real.setCreation(1902);
-        real.setStade("Santiago Bernabeu");
-        real.setCapaciteStade(81044);
-        real.setCouleurHome("White, White, White");
-        real.setCouleurAway("Black, Black, Black");
-        real.setPresident("Florentino Perez");
-        real.setChampionsLeague(11);
-        real.setChampionShips("xx");
-        
-        
-        
         /**
          * Afficher les info du club
          */
@@ -43,8 +27,6 @@ public class Manager {
         // Home Colors: White, White, White
         // Away Colors: Black, Black, Black
         // President: Florentino Perez
-//        System.out.println(real.toString());
-        real.showInfoClub();
 
         /**
          * Afficher le palmares du club
@@ -54,7 +36,6 @@ public class Manager {
         // *********************************************
         // Champions League: 11
         // Championships: xx*
-        real.showPalmares();
 
         /**
          * Afficher l'effectif
@@ -84,9 +65,6 @@ public class Manager {
         // 1. Cristiano Ronaldo
         // 2. Karim Benzema
         // ...
-        
-//        System.out.println(real.toString(real));
-//        team.showTeam();
-		
-	}
+
+    }
 }
