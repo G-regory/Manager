@@ -1,16 +1,16 @@
 public class Club {
-    private String name;
+    private String name ;
     private String country;
     private String city;
     private int creation;
     private String stade;
-    private int capaciteStade;
+    private String capaciteStade;
     private String couleurHome;
     private String couleurAway;
     private String president;
-    private String namePalmares;
-    private int championsLeague;
-    private String championShips;
+    private String namePalmares ;
+    private String championsLeague ;
+    private String championShips ;
 
 //    /**
 //     * Construit equipe lors de l'appel de la class Club
@@ -60,11 +60,11 @@ public class Club {
         this.stade = stade;
     }
 
-    public int getCapaciteStade() {
+    public String getCapaciteStade() {
         return capaciteStade;
     }
 
-    public void setCapaciteStade(int capaciteStade) {
+    public void setCapaciteStade(String capaciteStade) {
         this.capaciteStade = capaciteStade;
     }
 
@@ -100,11 +100,11 @@ public class Club {
         this.namePalmares = namePalmares;
     }
 
-    public int getChampionsLeague() {
+    public String getChampionsLeague() {
         return championsLeague;
     }
 
-    public void setChampionsLeague(int championsLeague) {
+    public void setChampionsLeague(String championsLeague) {
         this.championsLeague = championsLeague;
     }
 
