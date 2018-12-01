@@ -8,10 +8,11 @@ public class Manager {
         // 3 strikers (attaquants)
         // 4 midfielders (milieux)
 
-
+        Manager greg = new Manager();
         Club real = new Club();
         DisplayInfo info = new DisplayInfo();
-        info.palmares();
+        greg.showPalmares(real,info);
+        
 
         /**
          * Afficher les info du club
@@ -67,4 +68,11 @@ public class Manager {
         // ...
 
     }
+    public void showPalmares(Club pReal, DisplayInfo pInfo){
+        pReal.setNamePalmares("Palmares");
+        pReal.setChampionsLeague("11");
+        pReal.setChampionShips("xx");
+        System.out.println(pInfo.palmares(2,pReal));
+    }
+
 }
