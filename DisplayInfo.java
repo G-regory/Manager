@@ -3,43 +3,55 @@ import java.util.List;
 
 public class DisplayInfo {
 
-    Club real = new Club();
 
-    private List<String> questionManager = new ArrayList<>();
-    private List<String> reponseClub = new ArrayList<>();
-    
     /**
-     * Affiche le palmares du club
+     * Renseigne information
+     *
+     * @param nbInfo nombre d'information à afficher pour le palmares
+     * @return affiche l'écran souhaité
      */
-    public String palmares(int nbInfoPalmares, Club real) {
-        String displayPalmares,championsLeague="Champions League",championsShips="Championships" ;
-
-        questionManager.add(real.getNamePalmares());
-        questionManager.add(championsLeague);
-        questionManager.add(championsShips);
+    public String recupInfo(int nbInfo, List<String> infoList, List<String> questionInfoList) {
+        List<String> questionManager = new ArrayList<>();
+        List<String> reponseClub = new ArrayList<>();
+        //récupère les questions renseigné dans la class Manager
+        questionManager.add(infoList.get(0));
+        for (int i = 0; i < questionInfoList.size(); i++) {
+            questionManager.add(questionInfoList.get(i));
+        }
         reponseClub.add("****************");
-        reponseClub.add(real.getChampionsLeague());
-        reponseClub.add(real.getChampionShips());
+        for (int i = 1; i < nbInfo; i++) {
+            reponseClub.add(infoList.get(i));
+        }
 
-       return displayPalmares=this.displaySentence(nbInfoPalmares,questionManager,reponseClub);
+        return  this.incrementSentence(nbInfo, questionManager, reponseClub);
     }
 
 
-    public String displaySentence(int nbInfo,List<String> askManager, List<String> answerClub ){
-        String displayPalmares = "";
+    /**
+     * incrémente info pour faire une phrase
+     *
+     * @param nbInfo     nbre d'info a afficher
+     * @param askManager question, type country :
+     * @param answerClub réponse question
+     * @return phrase incrémenter
+     */
+    public String incrementSentence(int nbInfo, List<String> askManager, List<String> answerClub) {
+        String sentece = "";
 
-        for (int i = 0; i <= nbInfo; i++) {
+        for (int i = 0; i < nbInfo; i++) {
             if (i == 0) {
-                displayPalmares += answerClub.get(i) + "\n";
-                displayPalmares += askManager.get(i) + "\n";
-                displayPalmares += answerClub.get(i) + "\n";
+                sentece += answerClub.get(i) + "\n";
+                sentece += askManager.get(i) + "\n";
+                sentece += answerClub.get(i) + "\n";
             } else {
-                displayPalmares += askManager.get(i)+" :";
-                displayPalmares += answerClub.get(i) + "\n";
+                sentece += askManager.get(i) + " :";
+                sentece += answerClub.get(i) + "\n";
             }
         }
-        return displayPalmares;
+        return sentece;
     }
+
+
 }
 
 
