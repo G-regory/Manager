@@ -1,31 +1,100 @@
+import java.util.List;
+
 public class Club {
-    private String name ;
+    private String nameClub;
+    //team
+    private String nameTeam ;
+    private String season;
+    private String coach;
+    private String assistant;
+    private String captain;
+
+
+    private List<String> goalKeepers;
+    private List<String> midFielders;
+    private List<String> Strickers;
+
+    //real
+    private String nameReal ;
     private String country;
     private String city;
     private int creation;
     private String stade;
-    private String capaciteStade;
+    private int capaciteStade;
     private String couleurHome;
     private String couleurAway;
     private String president;
+    //palmares
     private String namePalmares ;
     private String championsLeague ;
     private String championShips ;
 
-//    /**
-//     * Construit equipe lors de l'appel de la class Club
-//     */
-//    public Club(){
-//        DisplayInfoClub.constructionEquipe(11);
-//    }
 
-
-    public String getName() {
-        return name;
+    //méthode
+    public void buildTeam(List<String> listTeam,String pUn, String pDeux) {
+        String[] tabBuild = {pUn,pDeux};
+        for(int i = 0; i < tabBuild.length;i++){
+            listTeam.add(tabBuild[i]);
+        }
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+
+    //getter & setters
+
+
+    public String getCoach() {
+        return coach;
+    }
+
+    public void setCoach(String coach) {
+        this.coach = coach;
+    }
+    public String getSeason() {
+        return season;
+    }
+
+    public void setSeason(String season) {
+        this.season = season;
+    }
+
+    public String getAssistant() {
+        return assistant;
+    }
+
+    public void setAssistant(String assistant) {
+        this.assistant = assistant;
+    }
+
+    public String getCaptain() {
+        return captain;
+    }
+
+    public void setCaptain(String captain) {
+        this.captain = captain;
+    }
+
+    public String getNameTeam() {
+        return nameTeam;
+    }
+
+    public void setNameTeam(String nameTeam) {
+        this.nameTeam = nameTeam;
+    }
+
+    public String getNameReal() {
+        return nameReal;
+    }
+
+    public void setNameReal(String nameReal) {
+        this.nameReal = nameReal;
+    }
+    public String getNameClub() {
+        return nameClub;
+    }
+
+    public void setNameClub(String nameClub) {
+        this.nameClub = nameClub;
     }
 
     public String getCountry() {
@@ -60,11 +129,11 @@ public class Club {
         this.stade = stade;
     }
 
-    public String getCapaciteStade() {
+    public int getCapaciteStade() {
         return capaciteStade;
     }
 
-    public void setCapaciteStade(String capaciteStade) {
+    public void setCapaciteStade(int capaciteStade) {
         this.capaciteStade = capaciteStade;
     }
 
@@ -115,4 +184,6 @@ public class Club {
     public void setChampionShips(String championShips) {
         this.championShips = championShips;
     }
+
+
 }
