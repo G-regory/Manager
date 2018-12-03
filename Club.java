@@ -1,21 +1,13 @@
+package com.souleyman.carriel.Model;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Club {
-    private String nameClub;
-    //team
-    private String nameTeam ;
-    private String season;
-    private String coach;
-    private String assistant;
-    private String captain;
+    
 
-
-    private List<String> goalKeepers;
-    private List<String> midFielders;
-    private List<String> Strickers;
-
-    //real
-    private String nameReal ;
+    //info Club
+    private String name;
     private String country;
     private String city;
     private int creation;
@@ -24,77 +16,31 @@ public class Club {
     private String couleurHome;
     private String couleurAway;
     private String president;
-    //palmares
-    private String namePalmares ;
-    private String championsLeague ;
-    private String championShips ;
-
-
-    //méthode
-    public void buildTeam(List<String> listTeam,String pUn, String pDeux) {
-        String[] tabBuild = {pUn,pDeux};
-        for(int i = 0; i < tabBuild.length;i++){
-            listTeam.add(tabBuild[i]);
-        }
+    
+    //info palmares
+    private int championsLeague;
+    private String championShips;
+    
+    //info effectif
+    private int season;
+    private String headCoach;
+    private String assistanceCoach;
+    private String captain;
+    private int nbGoalKeepers;
+    private int nbMidFielders;
+    private int nbStrickers;
+    private List<String> goalKeepers= new ArrayList<>();
+    private List<String> midFielders= new ArrayList<>();
+    private List<String> strickers= new ArrayList<>();
+    
+    
+    
+    public String getName() {
+        return name;
     }
 
-
-
-    //getter & setters
-
-
-    public String getCoach() {
-        return coach;
-    }
-
-    public void setCoach(String coach) {
-        this.coach = coach;
-    }
-    public String getSeason() {
-        return season;
-    }
-
-    public void setSeason(String season) {
-        this.season = season;
-    }
-
-    public String getAssistant() {
-        return assistant;
-    }
-
-    public void setAssistant(String assistant) {
-        this.assistant = assistant;
-    }
-
-    public String getCaptain() {
-        return captain;
-    }
-
-    public void setCaptain(String captain) {
-        this.captain = captain;
-    }
-
-    public String getNameTeam() {
-        return nameTeam;
-    }
-
-    public void setNameTeam(String nameTeam) {
-        this.nameTeam = nameTeam;
-    }
-
-    public String getNameReal() {
-        return nameReal;
-    }
-
-    public void setNameReal(String nameReal) {
-        this.nameReal = nameReal;
-    }
-    public String getNameClub() {
-        return nameClub;
-    }
-
-    public void setNameClub(String nameClub) {
-        this.nameClub = nameClub;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCountry() {
@@ -161,19 +107,11 @@ public class Club {
         this.president = president;
     }
 
-    public String getNamePalmares() {
-        return namePalmares;
-    }
-
-    public void setNamePalmares(String namePalmares) {
-        this.namePalmares = namePalmares;
-    }
-
-    public String getChampionsLeague() {
+    public int getChampionsLeague() {
         return championsLeague;
     }
 
-    public void setChampionsLeague(String championsLeague) {
+    public void setChampionsLeague(int championsLeague) {
         this.championsLeague = championsLeague;
     }
 
@@ -184,6 +122,88 @@ public class Club {
     public void setChampionShips(String championShips) {
         this.championShips = championShips;
     }
+
+    public int getSeason() {
+        return season;
+    }
+
+    public void setSeason(int season) {
+        this.season = season;
+    }
+
+    public String getHeadCoach() {
+        return headCoach;
+    }
+
+    public void setHeadCoach(String headCoach) {
+        this.headCoach = headCoach;
+    }
+
+    public String getAssistanceCoach() {
+        return assistanceCoach;
+    }
+
+    public void setAssistanceCoach(String assistanceCoach) {
+        this.assistanceCoach = assistanceCoach;
+    }
+
+    public String getCaptain() {
+        return captain;
+    }
+
+    public void setCaptain(String captain) {
+        this.captain = captain;
+    }
+
+    public int getNbGoalKeepers() {
+        return nbGoalKeepers;
+    }
+
+    public void setNbGoalKeepers(int nbGoalKeepers) {
+        this.nbGoalKeepers = nbGoalKeepers;
+    }
+
+    public int getNbMidFielders() {
+        return nbMidFielders;
+    }
+
+    public void setNbMidFielders(int nbMidFielders) {
+        this.nbMidFielders = nbMidFielders;
+    }
+
+    public int getNbStrickers() {
+        return nbStrickers;
+    }
+
+    public void setNbStrickers(int nbStrickers) {
+        this.nbStrickers = nbStrickers;
+    }
+
+    public List<String> getGoalKeepers() {
+        return goalKeepers;
+    }
+
+    public void setGoalKeepers(List<String> goalKeepers) {
+        this.goalKeepers = goalKeepers;
+    }
+
+    public List<String> getMidFielders() {
+        return midFielders;
+    }
+
+    public void setMidFielders(List<String> midFielders) {
+        this.midFielders = midFielders;
+    }
+
+    public List<String> getStrickers() {
+        return strickers;
+    }
+
+    public void setStrickers(List<String> strickers) {
+        this.strickers = strickers;
+    }
+
+
 
 
 }
