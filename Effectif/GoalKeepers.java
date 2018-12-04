@@ -1,7 +1,10 @@
 package com.souleyman.carriel.Model.Effectif;
 
 public class GoalKeepers extends Joueur{
+    private static int count;
+    public GoalKeepers(){
 
+    }
     private String position;
     private boolean titulaire;
 
@@ -19,5 +22,11 @@ public class GoalKeepers extends Joueur{
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    @Override
+    public String toString() {
+        count++;
+        return count+". "+ getName();
     }
 }
