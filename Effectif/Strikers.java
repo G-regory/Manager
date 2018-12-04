@@ -1,7 +1,7 @@
 package com.souleyman.carriel.Model.Effectif;
 
 public class Strikers extends Joueur{
-
+    private static int count;
     private String position;
 
 
@@ -12,4 +12,11 @@ public class Strikers extends Joueur{
     public void setPosition(String position) {
         this.position = position;
     }
+
+    @Override
+    public String toString() {
+        count++;
+        return count+". "+ getName();
+    }
+
 }
