@@ -10,4 +10,11 @@ public class HeadCoach {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String
+    toString() {
+        return "Head Coach: " +
+                getName();
+    }
 }
