@@ -1,10 +1,7 @@
 package com.souleyman.carriel.Model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Club {
-    
+
     private String name;
     private String country;
     private String city;
@@ -14,9 +11,15 @@ public class Club {
     private String couleurHome;
     private String couleurAway;
     private String president;
-    
+    private String Season;
 
+    public String getSeason() {
+        return Season;
+    }
 
+    public void setSeason(String season) {
+        Season = season;
+    }
 
     public String getName() {
         return name;
