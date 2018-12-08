@@ -3,7 +3,6 @@ package com.souleyman.carriel.Model;
 public class Joueur {
     private String firstName;
     private String lastName;
-    private String fullName;
     private String alias;
     private int numero;
     private String poste;
@@ -24,14 +23,6 @@ public class Joueur {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
     }
 
     public String getAlias() {
