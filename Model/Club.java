@@ -6,10 +6,14 @@ public class Club {
     private String country;
     private String city;
     private int creation;
-    private String couleurHome;
-    private String couleurAway;
     private String president;
     private String Season;
+    private String colorJerseyHome;
+    private String colorShortsHome;
+    private String colorSocksHome;
+    private String colorJerseyAway;
+    private String colorShortsAway;
+    private String colorSocksAway;
 
     public String getSeason() {
         return Season;
