@@ -11,14 +11,14 @@ public class Club {
     private String couleurHome;
     private String couleurAway;
     private String president;
-    private String Season;
+    private String season;
 
     public String getSeason() {
-        return Season;
+        return season;
     }
 
     public void setSeason(String season) {
-        Season = season;
+        season = season;
     }
 
     public String getName() {
