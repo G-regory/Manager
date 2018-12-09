@@ -6,8 +6,6 @@ public class Club {
     private String country;
     private String city;
     private int creation;
-    private String stade;
-    private int capaciteStade;
     private String couleurHome;
     private String couleurAway;
     private String president;
@@ -51,22 +49,6 @@ public class Club {
 
     public void setCreation(int creation) {
         this.creation = creation;
-    }
-
-    public String getStade() {
-        return stade;
-    }
-
-    public void setStade(String stade) {
-        this.stade = stade;
-    }
-
-    public int getCapaciteStade() {
-        return capaciteStade;
-    }
-
-    public void setCapaciteStade(int capaciteStade) {
-        this.capaciteStade = capaciteStade;
     }
 
     public String getCouleurHome() {
