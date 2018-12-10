@@ -3,7 +3,6 @@ package com.souleyman.carriel.Model;
 public class Coach {
     private String firstName;
     private String lastName;
-    private String fullName;
     private String alias;
     private boolean isHeadCoach;
 
@@ -29,14 +28,6 @@ public class Coach {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
     }
 
     public String getAlias() {

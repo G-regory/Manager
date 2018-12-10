@@ -7,20 +7,23 @@ public class Club {
     private String city;
     private int creation;
     private String president;
-    private String Season;
+    private String season;
     private String colorJerseyHome;
     private String colorShortsHome;
     private String colorSocksHome;
     private String colorJerseyAway;
     private String colorShortsAway;
     private String colorSocksAway;
+    private String colorJerseyThird;
+    private String colorShortsThird;
+    private String colorSocksThird;
 
     public String getSeason() {
-        return Season;
+        return season;
     }
 
     public void setSeason(String season) {
-        Season = season;
+        this.season = season;
     }
 
     public String getName() {
@@ -53,22 +56,6 @@ public class Club {
 
     public void setCreation(int creation) {
         this.creation = creation;
-    }
-
-    public String getCouleurHome() {
-        return couleurHome;
-    }
-
-    public void setCouleurHome(String couleurHome) {
-        this.couleurHome = couleurHome;
-    }
-
-    public String getCouleurAway() {
-        return couleurAway;
-    }
-
-    public void setCouleurAway(String couleurAway) {
-        this.couleurAway = couleurAway;
     }
 
     public String getPresident() {
