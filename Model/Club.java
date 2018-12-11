@@ -8,15 +8,6 @@ public class Club {
     private int creation;
     private String president;
     private String season;
-    private String colorJerseyHome;
-    private String colorShortsHome;
-    private String colorSocksHome;
-    private String colorJerseyAway;
-    private String colorShortsAway;
-    private String colorSocksAway;
-    private String colorJerseyThird;
-    private String colorShortsThird;
-    private String colorSocksThird;
 
     public String getSeason() {
         return season;
