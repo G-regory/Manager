@@ -9,19 +9,6 @@ public class Manager {
 
     public static void main(String[] args) {
 
-        Color.Type couleurCLub = Color.Type.HOME;
-        switch (couleurCLub){
-            case HOME:
-                System.out.println("White, White, White");
-                break;
-            case AWAY:
-                System.out.println("Black, Black, Black");
-            break;
-            case THIRD:
-                System.out.println("Red, Red, Red");
-                break;
-        }
-
         /***
          * 1. Construire un club
          ***/
