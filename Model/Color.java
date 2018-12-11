@@ -6,5 +6,9 @@ public class Color {
     private String colorJersey;
     private String colorShorts;
     private String colorSocks;
+
+    public enum Type{
+        HOME, AWAY, THIRD
+    }
 }
 ;

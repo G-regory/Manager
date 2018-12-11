@@ -1,4 +1,4 @@
-package com.souleyman.carriel.Model;
+package com.souleyman.carriel;
 
 public class Palmares {
 
